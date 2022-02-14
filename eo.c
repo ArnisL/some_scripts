@@ -1,3 +1,12 @@
+var SumSq(vars Data,int Length)
+{
+  var Ex = 0;
+  int i;
+  for(i=0; i<Length; i++)
+    Ex += Data[i]*Data[i];
+  return Ex;
+}
+
 var EO(vars Data,int Length)
 {
   vars Derivs = series(priceClose(0)-priceClose(2));
