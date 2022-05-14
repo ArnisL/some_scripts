@@ -1,4 +1,4 @@
-function KVO(var High, var Low, var Close, var Volume){
+float KVO(var High, var Low, var Close, var Volume){
 	vars hlc = series((High + Low + Close) / 3);	
 	vars cumVol = series(0, 2);
 	cumVol[0] = cumVol[1] + Volume;
