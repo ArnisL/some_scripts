@@ -1,4 +1,4 @@
-function EOM(var Length, vars High, vars Low, var Volume) {
+float EOM(var Length, vars High, vars Low, var Volume) {
 	var div = 10000000000;
 	var eom = SMA(
 		series(
@@ -7,5 +7,5 @@ function EOM(var Length, vars High, vars Low, var Volume) {
 			) * (High[0] - Low[0]) / Volume
 		),	Length
 	);
-	return eom*1000;
+	return eom;
 }
