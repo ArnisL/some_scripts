@@ -1,5 +1,5 @@
 // default Length = 20, FilterLength = 48
-function EhlersStochMESA(int Length, var* Price, int FilterLength){	
+float EhlersStochMESA(int Length, var* Price, int FilterLength){	
 	var pi = 2 * asin(1);
 	var* HP = series(HighPass2(Price, FilterLength));
 	var a1 = exp(-1.414 * 3.14159 / 10);
@@ -28,5 +28,5 @@ function EhlersStochMESA(int Length, var* Price, int FilterLength){
 	var* MESAStochastic = series(0);
 	MESAStochastic[0] = c1 * (Stoc[0] + Stoc[1]) / 2 + c2 * MESAStochastic[1] + c3 * MESAStochastic[2];
 	
-	return MESAStochastic[0]*100;
+	return MESAStochastic[0];
 }
