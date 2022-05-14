@@ -1,4 +1,4 @@
-function MFI(var Period, var High, var Low, var Close, var Volume) {
+float MFI(var Period, var High, var Low, var Close, var Volume) {
 	vars vol = series(Volume);	
 	vars hlc = series((High + Low + Close) / 3);	
 	var pos=.0;
